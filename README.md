@@ -1,5 +1,4 @@
-# Tsugi-App
-Tsugi-App including the mod
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 TSUGI - A Framework for Building Interoperable Learning Tools
 =============================================================
@@ -51,12 +50,26 @@ If you are just getting started turn on DEVELOPER mode so you can launch
 the tools easily.  Each of the fields is documented in the config-dist.php
 file - here is some additional documentation on the configuration values:
 
-    http://do1.dr-chuck.com/tsugi/phpdoc/classes/Tsugi.Config.ConfigInfo.html
+After done this , go to the lines 34,35,36 and 37 in your config.php and change them.
+if locally and using Xampp you should have something like this: 
 
-* Go to the main page, and click on "Admin" to make all the database
-tables - you will need the Admin password you just put into config.php
-If all goes well, lots of tables should be created.  You can run upgrade.php
-more than once - it will automatically detect that it has been run.
+```
+$CFG->pdo       = 'mysql:host=127.0.0.1;dbname=tsugi';
+$CFG->dbuser    = 'root';
+$CFG->dbpass    = '';
+```
+if locally and using Mamp you should have something like this: 
+
+```
+$CFG->pdo       = 'mysql:host=127.0.0.1;dbname=tsugi';
+$CFG->dbuser    = 'root';
+$CFG->dbpass    = 'root';
+
+```
+
+and if using Tsugi on your proper server configure it according to the setting and parameters.
+
+
 
 Adding Some Tools
 -----------------
@@ -134,6 +147,8 @@ http://www.dr-chuck.net/tsugi-static/ - if you like you can check out your own c
 of this repo locally or for your production environment and point your Tsugi `config.php`
 at your own copy of the library.
 
+
+--------------
 Other Languages
 ---------------
 
